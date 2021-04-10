@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profrea</title>
+
+    <!-- Importing jquery cdn -->
+    <link href=
+    "http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" 
+            rel="Stylesheet"
+            type="text/css" />
+      
+    <script type="text/javascript" 
+        src="http://code.jquery.com/jquery-1.7.2.min.js">
+    </script>
+      
+    <script type="text/javascript" 
+        src="http://code.jquery.com/ui/1.10.4/jquery-ui.js">
+    </script>
+
+    <!--Whatsapp-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--CSS Stylesheets-->
+    <link rel="stylesheet" href="styles.css">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <!--Font Families-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/6450af1cb3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--Navbar Section-->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark" id="">
+        <a href="" class="navbar-brand ">Doctor's Registration Form</a>
+
+        <button class="navbar-toggler" type="button" data-map-toggle="collapse" data-map-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="#footer" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#form-section" class="nav-link">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">About us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Detail Selector Section-->
+
+ <!--Image Section-->
+    <div class="profile-pic-div">
+        <img class="profile-img" src="images/image.jpg" id="photo">
+        <input type="file" accept="image/*" id="file">
+        <label for="file" id="uploadBtn">Choose Photo</label>
+    </div>
+    
+
+
+    <!--Form Section-->
+    
+    <div class="form-section">
+        <form>
+            <div id="personal details">
+                <div class="form-group">
+                    <label for="Name">Full Name <sup>*</sup> </label>
+                    <input data-map="1" autocomplete="off"  onclick=bg() type="text" class="form-control form-control-lg" id="Name"  placeholder="Enter Name" name="fullName" required> 
+                    <small id="errorName"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="desc">Description <sup>*</sup> </label>
+                    <textarea data-map = "2" autocomplete="off" onclick=bg() class="form-control" id="desc" rows="3" name="desc" maxlength="500" placeholder="500 words" required></textarea>
+                    <small id="errorDescription"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="servicesProvided">Service Provided <sup>*</sup> </label>
+                    <select data-map="3" onclick=bg() class="form-control form-control-lg" id="servicesProvided" required>
+                        <option disabled selected value> -- select an option -- </option>
+                        <option value="MD Medicine" id="MD Medicine">MD Medicine</option>
+                        <option value="General Physician" id="General Physician">General Physician</option>
+                        <option value="Cardiologist" id="Cardiologist">Cardiologist</option>
+                        <option value="Nephrologist" id="Nephrologist">Nephrologist</option>
+                        <option value="Dentist" id="Dentist">Dentist</option>
+                    </select>
+                    <small id="errorServicesProvided"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="ServicesOffered">Services Offered <sup>*</sup> </label>
+                    <input autocomplete="off" onclick=bg() type="file" accept="image/*" class="form-control form-control-lg" id="ServicesOffered" name="Services" required> 
+                    <small id="errorServicesOffered"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="Desc-Services-Offered">Description of Services Offered <sup>*</sup> </label>
+                    <textarea data-map="4" autocomplete="off" onclick=bg() class="form-control" id="Desc-Services-Offered" rows="3" name="desc" maxlength="500" placeholder="500 words" required></textarea>
+                    <small id="errorDesc-Services-Offered"></small>                 
+                </div>
+
+                <div class="form-group">
+                    <label for="Educational-Background">Educational Background <sup>*</sup> </label>
+                    <select data-map="5" onclick=bg() class="form-control form-control-lg" id="Educational-Background">
+                        <option disabled selected value> -- select an option -- </option>
+                        <option id="MBBS" value="MBBS">MBBS</option>
+                        <option id="MD" value="MD">MD</option>
+                        <option id="PHD" value="PHD">PHD</option>
+                    </select>
+                    <small id="errorEducational-Background"></small>                 
+                </div>                
+            </div>
+
+            <div id="contact-Informaition">
+                <div class="form-group">
+                    <label for="emailId">Email address <sup>*</sup> </label>
+                    <input data-map="6" autocomplete="off" onclick=bg() type="email" class="form-control form-control-lg" id="emailId" aria-describedby="emailHelp" placeholder="Enter email" name="emailId">
+                    <small id="emailHelp" style="font: grey;" class="form-text text-muted">We'll never share your email with anyone else.</small> 
+                    <small id="erroremailId"></small>
+                </div>
+    
+                
+                <div class="form-group">
+                    <label for="contactNumber">Contact Number <sup>*</sup> </label>
+                    <input data-map="7" autocomplete="off" onclick=bg() type="number" maxlength="10" minlength="10" class="form-control form-control-lg" id="contactNumber" aria-describedby="ContactNumber" placeholder="Enter Contact Number" name="contactNumber">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your ontact Number with anyone else.</small> 
+                    <small id="errorcontactNumber"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactNumber">Contact on Whatsapp  </label>
+                    <a class="btn-fill btn-blue sanbg"  target="_blank" href="https://api.whatsapp.com/send?phone=8962316970&amp;text=Hi there! You can ping me for your queries :)"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                </div>
+                 
+            </div>
+
+            <div id="Bookings">
+                <div class="form-group">
+                    <label for="daysAvailable">Days Available <sup>*</sup> </label>
+                    <select data-map="8" onclick=bg() class="form-control form-control-lg" id="daysAvailable">
+                        <option disabled selected value> -- select an option -- </option>
+                        <option value="Monday-Saturday" id="Monday-Saturday">Monday-Saturday</option>
+                        <option value="Monday-Sunday" id="Monday-Sunday">Monday-Sunday</option>
+                        <option value="Monday-Wednesday-Friday" id="Monday-Wednesday-Friday">Monday-Wednesday-Friday</option>
+                        <option value="Tuesday-Thrusday-Friday" id="Tuesday-Thrusday-Friday">Tuesday-Thrusday-Friday</option>
+                    </select>
+                    <small id="errordaysAvailable"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="timeSlots">Time Slots <sup>*</sup> </label>
+                    <select data-map="9" onclick=bg() class="form-control form-control-lg" id="timeSlots">
+                        <option disabled selected value> -- select an option -- </option>
+                        <optgroup label="Morning Hours">
+                            <option value="9:00-9:30am" id="9:00-9:30am">9:00-9:30</option>
+                            <option value="9:30-10:00am" id="9:30-10:00am">9:30-10:00</option>
+                            <option value="10:00-10:30am" id="10:00-10:30am">10:00-10:30</option>
+                            <option value="10:30-11:00am" id="10:30-11:00am">10:30-11:00</option>
+                            <option value="11:00-11:30am" id="11:00-11:30am">11:00-11:30</option>
+                            <option value="11:30-12:00am" id="">11:30-12:00</option>
+                        </optgroup>
+                        <optgroup label="Afternoon Hours">
+                            <option value="12:00-12:30pm" id="12:00-12:30pm">12:00-12:30</option>
+                            <option value="12:30-1:00pm" id="12:30-1:00pm">12:30-1:00</option>
+                            <option value="1:00-1:30pm" id="1:00-1:30pm">1:00-1:30</option>
+                            <option value="1:30-2:00pm" id="1:30-2:00pm">1:30-2:00</option>
+                            <option value="2:00-2:30pm" id="2:00-2:30pm">2:00-2:30</option>
+                            <option value="2:30-3:00pm" id="2:30-3:00pm">2:30-3:00</option>
+                        </optgroup>
+                        <optgroup label="Evening Hours">
+                            <option value="6:00-6:30pm" id="6:00-6:30pm">6:00-6:30</option>
+                            <option value="6:30-7:00pm" id="6:30-7:00pm">6:30-7:00</option>
+                            <option value="7:00-7:30pm" id="7:00-7:30pm">7:00-7:30</option>
+                            <option value="7:30-8:00pm" id="7:30-8:00pm">7:30-8:00</option>
+                            <option value="8:00-8:30pm" id="8:00-8:30pm">8:00-8:30</option>
+                            <option value="8:30-9:00pm" id="8:30-9:00pm">8:30-9:00</option>
+                        </optgroup>
+                    </select>
+                    <small id="errortimeSlots"></small>
+                </div>
+            </div>
+
+            <div id="">
+                <div class="form-group">
+                    <label  for="testimonials">Testimonials <sup>*</sup> </label>
+                    <textarea data-map="10" autocomplete="off" onclick=bg() class="form-control" id="testimonials" rows="5" name="testimonial" maxlength="300" placeholder="300 words" required></textarea>
+                    <small id="errortestimonials"></small>
+                </div>
+            </div>
+            <div class="preview-btn-div">
+                <button type="button" onclick="preview()" class="btn btn-dark btn-lg preview-btn" style="display: inline-block; margin:1rem;"> Preview </button>
+            </div>
+                
+                    
+        
+    </div>
+
+    <!--Preview-->
+    <div class="preview">
+        <table class="table table-hover">
+              <tr>
+                <th scope="row">Name</th>
+                <td> <span data-map="1" "> </span> </td>
+              </tr>
+
+              <tr>
+                <th scope="row">Description</th>
+                <td > <span data-map="2" ></span></td>
+              </tr>
+
+              <tr>
+                <th scope="row">services Provided</th>
+                <td > <span data-map = "3" ></span></td>
+              </tr>
+
+              <tr>
+                <th scope="row">Description of services</th>
+                <td > <span data-map="4" ></span></td>
+              </tr>
+
+              <tr>
+                <th scope="row">Educational Background</th>
+                <td > <span data-map="5" ></span></td>
+              </tr>
+
+              <tr>
+                <th scope="row">Email Address</th>
+                <td > <span data-map="6" ></span></td>
+              </tr>
+
+              <tr>
+                <th scope="row">Contact Number</th>
+                <td > <span data-map="7" ></span></td>
+              </tr>
+
+              <tr>
+                <th scope="row">Days Available</th>
+                <td > <span data-map="8" ></span></td>
+              </tr>
+
+              <tr>
+                <th scope="row">Time Slots</th>
+                <td > <span data-map="9" ></span></td>
+              </tr>
+
+              <tr>
+                <th scope="row">Testimonials</th>
+                <td > <span data-map="10"></span></td>
+              </tr>
+              
+          </table>
+          <div class="row">
+              <div class="col col-lg-12 col-md-6 col-sm-12 " style="text-align: center; padding: 2%;">
+                <button class="back btn btn-lg btn-outline-dark back"  onclick="back()" style="margin-right: 2%;" >Back</button>
+                <button type="submit" class="back btn btn-lg btn-success " >Submit</button>
+            </div>
+          </div> 
+        </form>
+    </div>
+
+    <!--Footer-->
+
+    <footer id="footer">
+        <a href="https://youtu.be/6v7Qu4BhVS4" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+        <i class="fab fa-facebook-square fa-2x"></i>
+        <i class="fab fa-twitter fa-2x"></i>
+        <a href="mailto: info@profrea.com" target="_blank"><i class="fas fa-envelope fa-2x"></i></a>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>

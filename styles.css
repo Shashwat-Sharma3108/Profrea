@@ -1,0 +1,204 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.red-star{
+    color: red;
+}
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2.5rem;
+    background-image: -webkit-linear-gradient(295deg,  #E4E9FD 50%, #A683E3 50%);
+}
+
+ul{
+    list-style: none;
+}
+
+button{
+    border: none;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.button-color{
+    background-color: #e62e00 ;
+    color: white;
+}
+
+.profile-img{
+    width: 200px;
+    height: 200px;
+}
+.profile-pic-div{
+    height: 200px;
+    width:200px;
+    position: absolute;
+    top: 20rem;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid grey;
+    margin-top: -5%;
+}
+
+#photo{
+    height: 100%;
+    width: 100%;
+}
+
+#file{
+    display: none;
+}
+
+#uploadBtn{
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    color: wheat;
+    line-height: 30px;
+    font-family: sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    display: none;
+}
+
+
+.form-section{
+    padding: 2rem 2rem;
+    width: 50%;
+    margin:20rem 25%;
+    margin-bottom: 10px;
+    box-shadow: 5px 10px 18px #888888;
+    background-color:white;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+.preview-btn{
+    margin-left: 10px;
+}
+
+.btn-dark{
+    position: relative;
+    margin-left: 45%;
+}
+
+
+footer{
+    justify-content: center;
+    text-align: center;
+    padding: 5rem 5rem;
+
+}
+
+.fab,.fas{
+    color: black;
+}
+.fa-whatsapp{
+    color:#25D366;
+}
+.fa-whatsapp:hover{
+    color:darkgreen;
+}
+
+i{
+    margin-right: 2rem;
+}
+
+.fa-youtube:hover{
+    color: red;
+}
+.fa-facebook-square:hover {
+    color: blue;
+}
+.fa-twitter:hover{
+    color: blue;
+}
+
+.fa-envelope:hover{
+    color: red;
+}
+
+.preview{
+   display: none;
+   justify-content: center;
+   margin: 5% 20%;
+   border:2px double grey;
+   background-color: white;
+   box-shadow: 15px 15px 18px 1rem #888888;  
+}
+
+table{
+    max-width:30rem;
+    margin: 5% auto;
+}
+/*.back{
+    margin: 1% 45%;
+}*/
+
+.preview-btn-div{
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 1000px){
+    .profile-pic-div{
+        margin: -5rem auto;
+    }
+     .preview-btn{
+        margin: 1rem;
+        display: block;
+        text-align: center;
+    }
+    /*.submit-btn{
+        display: block;
+        text-align: center;
+        margin-top: 1rem;
+    } */
+}
+
+@media only screen and (max-width: 980px) {
+    .btn-lg{
+        display: block;
+        text-align: center;
+        margin-bottom: 25px;
+    }  
+}
+
+@media only screen and (max-width: 480px){
+    .preview{
+        margin: 4% 4%;
+        word-break: break-all;
+    }
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+sup{
+    color:red;
+    font-size: 12px;
+}
+
+.sanbg{
+    margin-left: 10px;
+}
+
+small {
+    color: red;
+}
