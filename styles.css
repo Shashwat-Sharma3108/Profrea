@@ -182,6 +182,13 @@ table{
         margin: 4% 4%;
         word-break: break-all;
     }
+      .form-section{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        min-width: 25rem;
+        word-break: break-all;
+    }
 }
 
 input[type=number]::-webkit-inner-spin-button, 
