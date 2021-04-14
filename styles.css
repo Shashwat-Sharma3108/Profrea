@@ -186,8 +186,18 @@ table{
         margin-left: auto;
         margin-right: auto;
         display: block;
-        min-width: 25rem;
+        min-width: 20rem;
         word-break: break-all;
+    }
+}
+
+@media only screen and (max-width: 360px){
+    .form-section{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        min-width: 15rem;
+        word-break: break-all; 
     }
 }
 
